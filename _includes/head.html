@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>
+    {% if page.title %}{{ page.title }} &bull; {% endif %}{{ site.title }}
+  </title>
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="{{ site.description }}" />
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{{site.baseurl}}/assets/main.css" />
+
+  <!-- Google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,300"
+    rel="stylesheet"
+    type="text/css"
+  />
+</head>

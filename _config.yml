@@ -1,0 +1,63 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: CS131 Course Notes
+description: >- # this means to ignore newlines until "baseurl:"
+  Notes for Stanford's CS131 course.
+baseurl: /cs131_notes_dev # the subpath of your site, e.g. /blog
+
+########### ONLY CHANGE THESE FIELDS
+# replace with your own email for build notifications or leave it blank
+url: "https://visininjr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+###########
+
+# Theme-specific
+courseurl: "https://cs131.stanford.edu"
+theme_color: "#8c1515"
+
+collections:
+  chapters:
+    output: true
+    permalink: /:path/
+defaults:
+  - scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: chapter
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge
+exclude:
+  - Gemfile
+  - Gemfile.lock
+jekyll_prettier:
+    exclude: ["*.css"]
+
+
+
+
+

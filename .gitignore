@@ -1,0 +1,8 @@
+*.gem
+/Gemfile.lock
+/.bundle/
+*.gemfile.lock
+/_site/
+
+*.swp
+*.swo

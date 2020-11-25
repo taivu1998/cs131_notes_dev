@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{%- for module in page.modules -%}
+  <h2 class="module-header">Module {% increment module_index %}: {{module.name}}</h2>
+  <ol class="module-chapter-list">
+    {%- assign sorted_chapters = site.chapters | sort: "order" -%}
+    {%- for chapter in sorted_chapters -%}
+      {% comment %} We assume chapter URLs are formatted as /module_name/chapter_name. {% endcomment %}
+      {%- assign chapter_dir = chapter.url | remove_first: "/" | split: "/" | first -%}
+      {%- if chapter_dir != module.chapter_dir -%}
+        {%- continue -%}
+      {%- endif -%}
+      <li>
+        <h3>
+          <a href="{{chapter.url | relative_url}}">{{chapter.title}}</a>
+        </h3>
+        <div class="keywords">
+          {{ chapter.keywords }}
+        </div>
+      </li>
+    {%- endfor %}
+  </ol>
+{%- endfor -%}
