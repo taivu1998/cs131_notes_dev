@@ -25,7 +25,7 @@ baseurl: /cs131_notes_dev # the subpath of your site, e.g. /blog
 
 ########### ONLY CHANGE THESE FIELDS
 # replace with your own email for build notifications or leave it blank
-url: "https://visininjr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://taivu1998.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 ###########
 
 # Theme-specific
